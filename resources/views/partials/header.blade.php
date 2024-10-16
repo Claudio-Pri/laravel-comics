@@ -1,39 +1,77 @@
 @php
     $links = [
         [
-            'url' => '/',
-            'label' => 'Home',
-            'active' => true,
+            'url' => '#',
+            'label' => 'Characters',
+            // 'active' => true,
         ],
         [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
-            'active' => true,
+            'url' => '#',
+            'label' => 'Comics',
+            
         ],
         [
-            'url' => '/contatti',
-            'label' => 'Contatti',
-            'active' => false,
+            'url' => '#',
+            'label' => 'Movies',
+            
+        ],
+        [
+            'url' => '#',
+            'label' => 'TV',
+            
+        ],
+        [
+            'url' => '#',
+            'label' => 'Games',
+            
+        ],
+        [
+            'url' => '#',
+            'label' => 'Collectibles',
+            
+        ],
+        [
+            'url' => '#',
+            'label' => 'Videos',
+            
+        ],
+        [
+            'url' => '#',
+            'label' => 'Fans',
+            
+        ],
+        [
+            'url' => '#',
+            'label' => 'News',
+            
+        ],
+        [
+            'url' => '#',
+            'label' => 'Shop',
+            
         ],
     ];
 @endphp
 
 <header>
-    <nav>
-        <ul>
-            {{-- @foreach ($links as $link)
+    <div class="container">
+      <div class="my-header">
+        <div>
+          <a href="#">
+            <img src="{{ asset('image/dc-logo.png') }}" alt="DC Logo">
+          </a>
+        </div>
+        <nav>
+          <ul>
+            @foreach ($links as $link)
                 <li>
-                    @if ($link['active'])
-                        <a href="{{ $link['url'] }}">
-                            {{ $link['label'] }}
-                        </a>
-                    @else
-                        <del>
-                            {{ $link['label'] }}
-                        </del>
-                    @endif
+                    <a href="{{ $link['url'] }}">
+                        {{ $link['label'] }}
+                    </a>
                 </li>
-            @endforeach --}}
-        </ul>
-    </nav>
-</header>
+            @endforeach
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
