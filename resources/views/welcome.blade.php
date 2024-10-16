@@ -3,11 +3,13 @@
 @section('page-title', 'Home')
 
 @section('main-content')
-<h1>
-    Laravel Start 1
-</h1>
-
-<h2>
-    Ciao {{ $firstName }} {{ $lastName }}
-</h2>
+    <div class="container">
+        <div class="row">
+            @foreach ($comics as $comic)
+                <div class="col-2">
+                    {{ $loop->iteration }}
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection

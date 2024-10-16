@@ -21,7 +21,7 @@
 <header>
     <nav>
         <ul>
-            @foreach ($links as $link)
+            {{-- @foreach ($links as $link)
                 <li>
                     @if ($link['active'])
                         <a href="{{ $link['url'] }}">
@@ -33,7 +33,7 @@
                         </del>
                     @endif
                 </li>
-            @endforeach
+            @endforeach --}}
         </ul>
     </nav>
 </header>
