@@ -1,5 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
 
+
+$mainBlue: #0C7CEC;
+
+.header-top {
+    height: 8px;
+    background-color: $mainBlue;
+}
+
 header {
     .my-header {
         .logo {
@@ -20,10 +28,19 @@ header {
                     color: gray;
 
                     &:hover {
-                        color: blue;
+                        color: $mainBlue;
                     }
                 }
             }
         }
     }
+}
+
+#jumbotron {
+    // background-color: blueviolet;
+
+    min-height: 600px;
+    background-image: url('/image/jumbotron.jpg');
+    background-size: cover;
+
 }

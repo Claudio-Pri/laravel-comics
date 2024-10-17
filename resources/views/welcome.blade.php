@@ -3,27 +3,35 @@
 @section('page-title', 'Home')
 
 @section('main-content')
-    <div class="container">
-        <div class="row">
-            @foreach ($comics as $comic)
-                <div class="col-12 col-md-2">
-                    <div class="card">
-                        <div>
-                            <img class="card-img" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
-                        </div>
-                        <div>
-                            {{ $comic['title'] }}
-                        </div>
-                        
-                        <div>
-                            {{ $comic['price'] }}
-                        </div>
-                        <div>
-                            {{ $comic['series'] }}
+    {{-- sezione jumbotron --}}
+    <section id="jumbotron">
+
+    </section>
+
+    {{-- sezione card comics --}}
+    <section id="comics" class="py-4 bg-dark">
+        <div class="container">
+            <div class="row">
+                @foreach ($comics as $comic)
+                    <div class="col-12 col-md-2 mb-4">
+                        <div class="card">
+                            <div>
+                                <img class="card-img" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                            </div>
+                            <h4>
+                                {{ $comic['title'] }}
+                            </h4>
+                            
+                            <div>
+                                {{ $comic['price'] }}
+                            </div>
+                            <div>
+                                {{ $comic['series'] }}
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
-    </div>
+    </section>
 @endsection

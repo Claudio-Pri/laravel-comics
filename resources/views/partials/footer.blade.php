@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $links = [
         [
             'url' => '#',
@@ -51,7 +51,7 @@
             
         ],
     ];
-@endphp
+@endphp --}}
 
 
 <footer>

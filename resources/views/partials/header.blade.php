@@ -1,9 +1,9 @@
-@php
-    $links = [
+{{-- @php
+    $menuLinks = [
         [
             'url' => '#',
             'label' => 'Characters',
-            // 'active' => true,
+
         ],
         [
             'url' => '#',
@@ -51,19 +51,23 @@
             
         ],
     ];
-@endphp
+@endphp --}}
+
+
 
 <header>
+    <div class="header-top"></div>
     <div class="container">
-      <div class="my-header">
+      <div class="my-header d-flex py-3 align-items-center justify-content-between">
         <div>
           <a href="#">
-            <img src="{{ asset('image/dc-logo.png') }}" alt="DC Logo">
+            <img class="logo img-fluid" src="{{ asset('image/dc-logo.png') }}" alt="DC Logo">
           </a>
         </div>
+        {{-- nav menuLinks --}}
         <nav>
-          <ul>
-            @foreach ($links as $link)
+          <ul class="d-flex">
+            @foreach ($menuLinks as $link)
                 <li>
                     <a href="{{ $link['url'] }}">
                         {{ $link['label'] }}
@@ -75,3 +79,4 @@
       </div>
     </div>
   </header>
+
